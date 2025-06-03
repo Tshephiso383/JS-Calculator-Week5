@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <!--Numbers display-->
+        <div class="display">
+            <input type="text" id="display" value="0" readonly> 
+        </div>
+
+        <!--Buttons Grid-->
+        <div class="buttons">
+            <!--First Row-->
+            <button class="btn clear" onclick="clearDisplay()">AC</button>
+            <button class="btn operator" onclick="deleteLast()">DEL</button>
+            <button class="btn operator" onclick="apendToDisplay('/')">÷</button>
+            <button class="btn operator" onclick="apendToDisplay('*')">x</button>
+
+            <!--Second Row-->
+            <button class="btn number" onclick="apendToDisplay('7')">7</button>
+            <button class="btn number" onclick="apendToDisplay('8')">8</button>
+            <button class="btn number" onclick="apendToDisplay('9')">9</button>
+            <button class="btn operator" onclick="apendToDisplay('-')">-</button>
+
+            <!--Third Row-->
+            <button class="btn number" onclick="apendToDisplay('4')">4</button>
+            <button class="btn number" onclick="apendToDisplay('5')">5</button>
+            <button class="btn number" onclick="apendToDisplay('6')">6</button>
+            <button class="btn operator" onclick="apendToDisplay('+')">+</button>
+
+            <!--Fourth Row-->
+            <button class="btn number" onclick="apendToDisplay('1')">1</button>
+            <button class="btn number" onclick="apendToDisplay('2')">2</button>
+            <button class="btn number" onclick="apendToDisplay('3')">3</button>
+            <button class="btn equals" onclick="calculate()" rowspan="2">=</button>
+
+            <!--Fifth Row-->
+            <button class="btn number zero" onclick="apendToDisplay('0')">0</button>
+            <button class="btn number" onclick="apendToDisplay('.')">.</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
