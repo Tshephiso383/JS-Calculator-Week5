@@ -1,0 +1,158 @@
+/* Calculator Container */
+.calculator {
+    max-width: 320px;
+    margin: 50px auto;
+    background: #2c3e50;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Display Screen */
+#display {
+    width: 100%;
+    height: 80px;
+    background: #34495e;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 2rem;
+    text-align: right;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.15s ease;
+}
+
+#display:focus {
+    background: #3b4d61;
+}
+
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Base Button Styling */
+.btn {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Number Buttons */
+.btn.number {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.btn.number:hover {
+    background: #d5dbdb;
+}
+
+/* Operator Buttons */
+.btn.operator {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn.operator:hover {
+    background: #c0392b;
+}
+
+/* Equals Button */
+.btn.equals {
+    background: #27ae60;
+    color: white;
+    grid-column: span 2;
+}
+
+.btn.equals:hover {
+    background: #229954;
+}
+
+/* Clear Button */
+.btn.clear {
+    background: #f39c12;
+    color: white;
+}
+
+.btn.clear:hover {
+    background: #e67e22;
+}
+
+/* Zero Button (spans 2 columns) */
+.btn.number.zero {
+    grid-column: span 2;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.btn.number.zero:hover {
+    background: #d5dbdb;
+}
+
+/* Special Effects */
+.btn:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .calculator {
+        max-width: 280px;
+        padding: 15px;
+        margin: 20px auto;
+    }
+    
+    #display {
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .buttons {
+        gap: 10px;
+    }
+}
+
+/* Display Container */
+.display {
+    margin-bottom: 20px;
+}
+
+/* Body Styling (optional) */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
